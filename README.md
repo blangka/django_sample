@@ -3,6 +3,7 @@
 django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작합니다.  
 간단하게 [주식 검색 웹 만들기](https://hmg.udemy.com/course/django-s/learn/lecture/18126411#overview) 강의를 보며 프로젝트를 구성할 예정입니다.  
 공식문서로는 [django doc](https://docs.djangoproject.com/ko/4.1/intro/overview) 을 참고하여 기본 구조 및 상세 내용을 프로젝트 진행 하면서 기재할 예정입니다.
+개념 설명 참고 자료 : http://pythonstudy.xyz/python/article/306-Django-%EB%B7%B0-View
 
 ## 가상 환경에서 실행 시키기
 
@@ -50,3 +51,21 @@ django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작
             $ python manage.py runserver
     ```  
    실행 후 http://127.0.0.1:8000/ 에 접속하면 나온다.
+
+## [tutorial](https://docs.djangoproject.com/ko/4.1/intro/tutorial01/) 에 있는 동작 수행
+
+1. 앱 생성
+    ```bash
+            $ python manage.py startapp polls
+    ```
+
+2. view 작성하기
+   polls view에 아래와 같이 작성한다.
+    ```python
+            from django.http import HttpResponse
+
+            def index(request):
+                return HttpResponse("Hello, world. You're at the polls index.")
+    ```
+   
+    Django에서의 view MVC 에서 controller 와 비슷한 역활을 한다. 데이터를 http response로 보낸다
