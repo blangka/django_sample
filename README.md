@@ -69,3 +69,47 @@ django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작
     ```
    
     Django에서의 view MVC 에서 controller 와 비슷한 역활을 한다. 데이터를 http response로 보낸다
+
+
+3. DB 연결
+   1. django_stock/settings.py 에서 DATABASES 부분을 수정한다.
+        ```python
+                DATABASES = {
+                    'default': {
+                        'ENGINE': 'django.db.backends.sqlite3',
+                        'NAME': BASE_DIR / 'db.sqlite3',
+                    }
+                }
+        ```  
+   
+   2. django에서 필요한DB 생성 DB 생성
+        ```bash
+                $ python manage.py migrate
+        ```
+      
+4. model 만들기  
+   polls의 model을 수정해서 만들어준 다음 하기 명령어를 입력한다.  
+    ```bash
+              $ python manage.py makemigrations polls
+    ```  
+    ```bash
+              $ python manage.py sqlmigrate polls 0001
+    ```  
+    ```bash
+              $ python manage.py migrate
+    ```  
+
+    해당 과정을 모두 수행하면  localhost 에 DB가 생성 된다.  
+  
+
+5. 관리자 생성하기  
+   관리자 사이트에 로그인 할수 있는 사용자를 생성합니다.  
+    ```bash
+              $ python manage.py createsuperuser
+    ```  
+    ```bash
+              Username (leave blank to use 'user'): admin
+              Email address: admin@example.com
+    ```  
+   이후에 http://127.0.0.1:8000/admin/ 로 접속하면 DB 변경 가능한 관리자 화면 생성 가능  
+
