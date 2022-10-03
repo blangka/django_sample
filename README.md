@@ -115,5 +115,6 @@ django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작
   
   
 6. view에 model 연결하기  
-   step 1 ) view 로 인자를 받을 수 있도록 샘플 views.py와 urls.py에 추가 한다  
+   step 1 ) view 로 인자를 받을 수 있도록 샘플 views.py와 urls.py에 추가 한다.
+   step 2 ) model과 view 연결
 
