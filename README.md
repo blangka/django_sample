@@ -3,7 +3,7 @@
 django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작합니다.  
 간단하게 [주식 검색 웹 만들기](https://hmg.udemy.com/course/django-s/learn/lecture/18126411#overview) 강의를 보며 프로젝트를 구성할 예정입니다.  
 공식문서로는 [django doc](https://docs.djangoproject.com/ko/4.1/intro/overview) 을 참고하여 기본 구조 및 상세 내용을 프로젝트 진행 하면서 기재할 예정입니다.
-개념 설명 참고 자료 : http://pythonstudy.xyz/python/article/306-Django-%EB%B7%B0-View
+개념 설명 참고 자료 : 성
 
 ## 가상 환경에서 실행 시키기
 
@@ -111,5 +111,9 @@ django의 기본 적인 구조에 대해서 알아 보는 프로젝트로 시작
               Username (leave blank to use 'user'): admin
               Email address: admin@example.com
     ```  
-   이후에 http://127.0.0.1:8000/admin/ 로 접속하면 DB 변경 가능한 관리자 화면 생성 가능  
+   이후에 http://127.0.0.1:8000/admin/ 로 접속하면 DB 변경 가능한 관리자 화면 생성 가능
+  
+  
+6. view에 model 연결하기  
+   step 1 ) view 로 인자를 받을 수 있도록 샘플 views.py와 urls.py에 추가 한다  
 
